@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CDON Coding Challenge</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body onload="run(20)" class="body">
+    <main>
+      <header class="headerDiv">
+        <img
+          src="src/media/cdonLogo.png"
+          class="cdonLogo"
+          onclick="reloadPage()"
+          alt="CDON Logo"
+        />
+        <button type="button" class="refreshButton">
+          <img
+            src="src/media/refreshImg.png"
+            class="refreshImg"
+            onClick="reloadProductList(20)"
+            alt="Reload Products"
+          />
+        </button>
+      </header>
+
+      <div class="shoppingContent">
+        <div class="productList"></div>
+        <img src="src/media/loadingImg.png" alt="loading" class="loadingImg" />
+      </div>
+
+      <div class="productFocus">
+        <img
+          src="src/media/closeX.png"
+          alt="close"
+          class="closeProduct"
+          onclick="hideProduct()"
+        />
+        <img
+          src=""
+          class="previousImage"
+          alt="giphy"
+          onclick="changeImage(this)"
+        />
+        <img src="" class="bigImage" alt="giphy" />
+        <img src="" class="nextImage" alt="giphy" onclick="changeImage(this)" />
+      </div>
+    </main>
+    <script type="text/javascript" src="src/index.js"></script>
+  </body>
+</html>

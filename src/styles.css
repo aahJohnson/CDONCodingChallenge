@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eceef0;
+}
+
+/* Header */
+
+.headerDiv {
+  position: sticky;
+  top: 0;
+  height: 5rem;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 1px 6px #00000012;
+}
+
+.cdonLogo {
+  position: absolute;
+  margin: 1rem 0 0 20vw;
+  height: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.refreshButton {
+  position: absolute;
+  cursor: pointer;
+  margin: 1.25rem 0 0 80vw;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background-color: #eceef0;
+  border: 1px solid #00000012;
+}
+
+/* Main Page */
+
+.shoppingContent {
+  height: 100%;
+  width: 80rem;
+  max-width: 100%;
+  margin: auto;
+}
+
+.productList {
+  column-count: 4;
+  gap: 1rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.giphyImage {
+  display: block;
+  height: auto;
+  width: 95%;
+  border-radius: 5px;
+  border: 0.5rem solid white;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+/* Product Focus */
+
+.productFocus {
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100vh;
+  width: 100%;
+}
+
+.closeProduct {
+  position: absolute;
+  margin: 5vh 0 0 90vw;
+  cursor: pointer;
+  z-index: 1;
+  background-color: #a7abaf;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.bigImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  max-height: 80vh;
+  max-width: 60vw;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 0.5rem solid white;
+  z-index: 10;
+}
+
+.previousImage {
+  position: absolute;
+  top: 50%;
+  left: 2vw;
+  transform: translate(0, -50%);
+  max-height: 20vh;
+  max-width: 15vw;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 0.5rem solid white;
+  cursor: pointer;
+}
+
+.nextImage {
+  position: absolute;
+  top: 50%;
+  right: 2vw;
+  transform: translate(0, -50%);
+  max-height: 20vh;
+  max-width: 15vw;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 0.5rem solid white;
+  cursor: pointer;
+}
+
+/* Loading Page */
+
+.loadingImg {
+  display: none;
+  margin: 5vh 0 5vh 50%;
+  transform: translate(-50%);
+  animation: 1s loadingSpin infinite linear;
+  z-index: 100;
+}
+
+@keyframes loadingSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Smaller screens */
+
+@media (max-width: 1200px) {
+  .productList {
+    column-count: 3;
+  }
+
+  .closeProduct {
+    margin: 80vh 0 0 50%;
+    transform: translate(-50%);
+    width: 2rem;
+    padding: 1.5rem;
+  }
+
+  .bigImage {
+    height: auto;
+    width: 80%;
+    top: 40%;
+  }
+
+  .previousImage {
+    top: 85%;
+    left: 15vw;
+    max-height: 10rem;
+    width: auto;
+    max-width: 30vw;
+  }
+
+  .nextImage {
+    top: 85%;
+    right: 15vw;
+    max-height: 10rem;
+    width: auto;
+    max-width: 30vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .productList {
+    column-count: 2;
+  }
+
+  .bigImage {
+    max-width: 90%;
+    top: 40%;
+  }
+
+  .previousImage {
+    top: 85%;
+    left: 5%;
+  }
+
+  .nextImage {
+    top: 85%;
+    right: 5%;
+  }
+}
+
+@media (max-width: 400px) {
+  .productList {
+    column-count: 1;
+  }
+
+  .closeProduct {
+    margin: 90vh 0 0 50%;
+  }
+
+  .bigImage {
+    top: 50%;
+  }
+
+  .previousImage {
+    top: auto;
+    bottom: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 70vw;
+  }
+
+  .nextImage {
+    top: 70%;
+    bottom: auto;
+    right: 50%;
+    transform: translate(50%);
+    max-width: 70vw;
+  }
+}
